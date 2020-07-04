@@ -84,18 +84,21 @@
 
 ### Front-End 
 
-- **HTML** for the base structure of the website
-- **CSS** for adding styles to HTML elements
-- **MATERIALISE** for frameworks
-- **JQUERY** for javascript functionality
+- **HTML** for the base structure of the website
+- **CSS** for adding styles to HTML elements
+- **MATERIALISE** for frameworks
+- **JQUERY** for javascript functionality
 
 ### Back-End
-- **FLASK** microframework
-- **FLASK-PYMONGO**
-- **DNSPYTHON** 
-- **HERUKO**
-- **PYTHON**
-- **PYMONGO**
+
+- **FLASK** microframework
+- **FLASK-PYMONGO**
+- **DNSPYTHON** for using the new style connection string for MongoDB Atlas
+- **HERUKO**
+- **PYTHON**
+- **PYMONGO**
+- **MongoDB Atlas**
+- **BSON**
 
 ## Tools
 - [colorpicker.com](https://www.ginifab.com/feeds/pms/color_picker_from_image.php)

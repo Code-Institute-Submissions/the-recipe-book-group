@@ -1,0 +1,18 @@
+<html>
+<head>
+<!--parent template-->
+{% extends 'base.html' %}
+<!--inject the followig into parent template-->
+{% block content %}
+    {% for recipe in recipes %}
+        {{recipe.recipe_name}}
+        {{recipe.serves}}
+        {{recipe.prep_time}}
+        {{recipe.cooking_time}}
+        {{recipe.ingredients}}
+        {{recipe.instructions}}
+        {{recipe.added_by}}
+        {{recipe.is_tasty}}
+    {% endfor %}
+{% endblock %}
+
