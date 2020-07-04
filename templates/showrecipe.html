@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    
+  
+ {% for recipe in recipes %}
+ <div class="row">
+ <p>{{recipe.recipe_name}} and welcome to the SHOWRECIPEOPAGE</p>
+ </div>
+ <div class="row">
+ <p>{{recipe.cooking_time}} - {{recipe.instructions}}</p>
+ 
+ </div>
+  
+  {% endfor %}
+
+  {% endblock %}
