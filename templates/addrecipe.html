@@ -1,10 +1,63 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="row">
+<div>
+<h3>ADD RECIPE:</h3>
+</div>
+<br>
+<div class="row">
+<div class="col s4"></div>
+<span>
+ <!-- Dropdown Trigger -->
+ <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Choose Category</a>
+        </div>
+</span>
+</div>
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content transparent z-depth-0'>
+    <li><a href="#!">Appitiser & Dips</a></li>
+    <li><a href="#!">Soups & Salads</a></li>  
+    <li><a href="#!">Side Dishes</a></li>
+    <li><a href="#!">Main Dishes</a></li>
+    <li><a href="#!">Desserts</a></li>
+    <li><a href="#!">Miscellanous</a></li>
+  </ul>
 
-<h3>ADD RECIPE</h3>
+<!--code adapted from Materialize-->
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+          <i class="material-icons prefix">add_box</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix">Name of Recipe</label>
+        </div>
+      
+     
+    </form>
+  </div>
+
+   <div class="row">
+    <form class="col s12">
+      <div class="row">
+      
+        <div class="input-field col s12">
+     
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Ingredients:</label>
+        </div>
+      </div>
+    </form>
+  </div>
 
 
+  
 
 
+<!-- Icons:
+
+library_book
+
+-->
 
 {% endblock %}
