@@ -6,10 +6,10 @@
   
  {% for recipe in recipes %}
  <div class="row">
- <p>{{recipe.recipe_name}} and welcome to the SHOWRECIPEOPAGE</p>
+ <p>Recipe Name:{{recipe.recipe_name}}</p>
  </div>
  <div class="row">
- <p>{{recipe.cooking_time}} - {{recipe.instructions}}</p>
+ <p>Serves: {{ recipe.serves}} Prep Time: {{ recipe.prep_time }} Cooking Time: {{ recipe.cooking_time}} ingredients: {{recipe.ingredients}}</p>
  
  </div>
   
