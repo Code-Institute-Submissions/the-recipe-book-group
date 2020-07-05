@@ -1,46 +1,42 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="row">
-<div>
+
+<div class="add_header">
 <h3>ADD RECIPE:</h3>
 </div>
-<br>
-<div class="row">
-<div class="col s4"></div>
-<span>
- <!-- Dropdown Trigger -->
- <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Choose Category</a>
-        </div>
-</span>
-</div>
-  <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content transparent z-depth-0'>
-    <li><a href="#!">Appitiser & Dips</a></li>
-    <li><a href="#!">Soups & Salads</a></li>  
-    <li><a href="#!">Side Dishes</a></li>
-    <li><a href="#!">Main Dishes</a></li>
-    <li><a href="#!">Desserts</a></li>
-    <li><a href="#!">Miscellanous</a></li>
-  </ul>
 
+ <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
+<div class="row">
+  <div class="input-field col s12">
+    <select id="category" name="category_name">
+      <option value="" disabled selected>Choose Category</option>
+      {% for cat in categories %}
+      <option value="{{ cat.category_name }}">{{ cat.category_name }}</option>
+      {% endfor %} 
+    </select>
+    <label>Materialize Select</label>
+  </div>
+  </div>
 <!--code adapted from Materialize-->
   <div class="row">
-    <form class="col s12">
+   
       <div class="row">
         <div class="input-field col s4">
           <i class="material-icons prefix">add_box</i>
-          <input id="icon_prefix" type="text" class="validate">
+          <input id="recipe_name" name="recipe_name" type="text" class="validate">
           <label for="icon_prefix">Name of Recipe</label>
         </div>
-      
-     
-    </form>
+
+    </div>
+   
+  
+    <!--Uase form validation for certain fields-->
   </div>
 
    <div class="row">
     <form class="col s12">
       <div class="row">
-      
+      <!--not sure how to name this input field as above-->
         <div class="input-field col s12">
      
           <textarea id="textarea1" class="materialize-textarea"></textarea>
@@ -49,9 +45,13 @@
       </div>
     </form>
   </div>
-
-
-  
+ <div class="row">
+      <button class="btn waves-effect waves-light" type="submit" name="action">Add Recipe
+    <i class="material-icons right">done_all</i>
+  </button>
+     </div>
+ 
+    </form>
 
 
 <!-- Icons:

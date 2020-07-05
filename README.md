@@ -29,8 +29,9 @@
 
 ## Project Purpose
 
-1. To build a full stack site that allows all users to manage a common dataset of shared recipes.
-2. To provide an opportunity for the owner to collect all data provided for future use.
+1. To build a full stack site that allows all users to manage a common dataset of shared recipes.
+2. To provide an opportunity for the owner to collect all data provided for future use.
+ 
 
 ## User stories
 
@@ -43,6 +44,7 @@
 
 ## UX
 
+* The site is to be constructed according to the D.R.U.D (create, read, use, delete) principle.
 * The site should have it's features emmidiately accesable to a user  
 * The user should have easily accesable recipes and be provided with basic instructions for its use
 * The users should be able to share their recipes with the group. This will include details of the recipe such as ingredients, cooking time, amount of people it serves, cooking instructions etc.

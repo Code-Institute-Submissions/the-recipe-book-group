@@ -4,7 +4,8 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  
 <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
+
+<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
 
 
 </head>
@@ -16,6 +17,9 @@
     <!--dropdown feature code from materialize-->
     <script type="text/JavaScript">
       $(document).ready(function(){
+        $('select').material_select();
+        });
+
       $('.dropdown-button').dropdown({
       inDuration: 1500,
       outDuration: 1000,
@@ -25,9 +29,8 @@
       belowOrigin: true, // Displays dropdown below the button
       alignment: 'left', // Displays dropdown with edge aligned to the left of button
       stopPropagation: false // Stops event propagation
-    }
-  );
-  });
+    });
+  
     </script>
 </body>
 </html>
