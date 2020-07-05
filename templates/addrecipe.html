@@ -17,47 +17,61 @@
     <label>Please</label>
   </div>
   </div>
-
-
-   
+   <div class="row">
+        <div class="input-field col s4">
+          <i class="material-icons prefix">face</i>
+          <input id="user_name" name="user_name" type="text" class="validate">
+          <label>Your Name:</label>
+        </div>
+    </div>
       <div class="row">
         <div class="input-field col s4">
           <i class="material-icons prefix">add_box</i>
           <input id="recipe_name" name="recipe_name" type="text" class="validate">
-          <label for="icon_prefix">Name of Recipe</label>
+          <label>Name of Recipe</label>
         </div>
-
     </div>
-
-    <div class="row">
+     <div class="row">
      <div class="input-field col s1">
           <i class="material-icons prefix">group</i>
           <input id="icon_prefix" name="serves" type="text" class="validate">
           <label for="icon_prefix">Serves</label>
         </div>
-        <div class="input-field col s1">
+        <div class="input-field col s2">
           <i class="material-icons prefix">timer</i>
           <input id="icon_prefix" name="prep_time" type="text" class="validate">
           <label for="icon_prefix">Prep Time</label>
         </div>
+        <div class="input-field col s2">
+          <i class="material-icons prefix">hot_tub</i>
+          <input id="cooking_time" name="cooking_time" type="text" class="validate">
+          <label for="icon_prefix">Cooking Time</label>
+        </div>
     
     </div>
-   
-  
-     <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-        <input id="ingredients" name="ingredients" type="text" class="validate">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1">Ingredients:</label>
+
+    <div class="row">
+    <div class="input-field col s8">
+          <i class="material-icons prefix">list</i>
+          <input id="ingredients" name="ingredients" type="text" class="validate">
+          <label for="icon_prefix">ingredients</label>
         </div>
-      </div>
-      </div>
     
-  
+    </div>
 
-
+      <div class="row">
+    <div class="input-field col s8">
+          <i class="material-icons prefix">assignment</i>
+          <input id="instructions" name="instructions" type="text" class="validate">
+          <label for="icon_prefix">Instructions</label>
+        </div>
+    
+    </div>
+    <div class="row">
+    
+<a class="waves-effect waves-light btn">Nutritional Value</a>
+    </div>
+     
  <div class="row">
       <button class="btn waves-effect waves-light" type="submit" name="action">Add Recipe
     <i class="material-icons right">done_all</i>
@@ -70,7 +84,11 @@
 <!-- Icons:
 
 library_book
-
+add_a_phote
+face
+av_timer
+hourglass_empty
+hourglass_full
 -->
 
 {% endblock %}
