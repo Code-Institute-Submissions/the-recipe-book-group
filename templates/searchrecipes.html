@@ -4,6 +4,25 @@
 <h1>Search Recipes</h1>
 </div>
 
+<form action="{{ url_for('search_recipes') }}">
 
+<div class="row">
+  
+  <div class="input-field col s2">
+    <select id="recipe" name="recipe_name">
+      <option value="" disabled selected>Choose Meal</option>
+      {% for recipe in recipes %}
+      <option value="{{ recipe.recipe_name }}">{{ recipe.recipe_name }}</option>
+      {% endfor %} 
+    </select>
+    <label>Please</label>
+  </div>
+
+  
+  
+
+  </div>
+  
+  </form>
 
     {% endblock %}
