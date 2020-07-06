@@ -6,6 +6,7 @@
   
  {% for recipe in recipes %}
  <div class="row">
+  <p>Recipe Name:{{recipe.added_by}}</p>
  <p>Recipe Name:{{recipe.recipe_name}}</p>
  </div>
  <div class="row">
@@ -13,7 +14,7 @@
  <p>Prep Time: {{ recipe.prep_time }} </p> 
  <p>Cooking Time: {{ recipe.cooking_time}} </p> 
  <p>ingredients: {{recipe.ingredients}}</p>
- 
+ <p>ingredients: {{recipe.instructions}}</p>
  </div>
   
   {% endfor %}
