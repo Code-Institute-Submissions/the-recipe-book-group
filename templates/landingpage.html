@@ -26,7 +26,11 @@
     <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
   </ul>
   </nav>
-    
-
+  <div class="row">
+  <a href="{{ url_for('add_recipe')}}" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Add Recipe</a>
+  <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Edit Recipe</a>
+  <a href="{{ url_for('search_recipes')}}" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Look up Recipe</a>
+  
+</div>
 {% endblock %}
 

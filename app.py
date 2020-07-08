@@ -17,16 +17,21 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route('/get_recipes')
 def get_recipes():
-    return render_template("landingpage.html", recipes=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find(),
+    categories=mongo.db.categories.find(),
+    return render_template("landingpage.html")
 
 @app.route('/search_recipes')
 def search_recipes():
     recipes=mongo.db.recipes.find()
-    return render_template("/searchrecipes.html")
+    return render_template("/searchrecipes.html", recipes=mongo.db.recipes.find(), categories=mongo.db.categories.find())
 
-@app.route('/display_recipe')
-def display_recipe():
-    return render_template("displayrecipe.html", recipes=mongo.db.recipes.find())
+@app.route('/display_recipe/<recipe_id>')
+def display_recipe(recipe_id):
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template("displayrecipe.html", recipe=the_recipe,
+                                categories=all_categories)
 
 
 
@@ -41,19 +46,17 @@ def insert_recipe():
     return redirect(url_for('show_recipe')) 
      # only redirected to show_recipe for test purposes 
 
-@app.route('/show_recipe/<recipe_id>')
-def show_recipe(recipe_id):
-    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipes_id)})
-    all_recipes = mongo.db.recipes.find()
-    return render_template("showrecipe.html", recipe=the_recipe,
-                                recipes=all_recipes)
+@app.route('/show_recipe')
+def show_recipe():
+    return render_template("showrecipe.html", recipes=mongo.db.recipes.find())
 
-@app.route('/edit_task/<task_id>')
-def edit_task(task_id):
-    the_task =  mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
-    all_categories =  mongo.db.categories.find()
-    return render_template('edittask.html', task=the_task,
-                           categories=all_categories)
+@app.route('/delete_recipe/ <recipe_id>')
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    return redirect(url_for('show_recipe'))
+
+
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
