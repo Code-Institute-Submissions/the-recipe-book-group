@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+  <p>Recipe Name:{{recipes.added_by}}</p>
+ <p>Recipe Name:{{recipes.recipe_name}}</p>
+
+ <p>Serves: {{ recipes.serves }} </p> 
+ <p>Prep Time: {{ recipes.prep_time }} </p> 
+ <p>Cooking Time: {{ recipes.cooking_time}} </p> 
+ <p>ingredients: {{recipes.ingredients}}</p>
+ <p>ingredients: {{recipes.instructions}}</p>
+
+</div>
+{% endblock %}
