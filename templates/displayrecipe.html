@@ -1,15 +1,37 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="row">
-  <p>Recipe Name:{{recipes.added_by}}</p>
- <p>Recipe Name:{{recipes.recipe_name}}</p>
 
- <p>Serves: {{ recipes.serves }} </p> 
- <p>Prep Time: {{ recipes.prep_time }} </p> 
- <p>Cooking Time: {{ recipes.cooking_time}} </p> 
- <p>ingredients: {{recipes.ingredients}}</p>
- <p>ingredients: {{recipes.instructions}}</p>
+{% for recipe in recipes %}
 
-</div>
+ <div class="input-field col s12">
+      <select id="recipe" name="recipe_name">
+        <option value="" disabled selected>Selected Recipe</option>
+      {% for recipe in recipes %}
+      {% if recipe.recipe_name == recipe.recipe_name %}
+        <option value="{{ recipe.recipe_name }}">{{ recipe.recipe_name }}</option>
+        {% else %}
+        <option value="{{ recipe.recipe_name }}">{{ recipe.recipe_name }}</option>
+        {% endif %}
+        {% endfor %}
+      </select>
+      <label>Please</label>
+
+ <div class="row">
+  <p>Recipe Name:{{recipe.added_by}}</p>
+ <p>Recipe Name:{{recipe.recipe_name}}</p>
+ </div>
+ <div class="row">
+ <p>Serves: {{ recipe.serves }} </p> 
+ <p>Prep Time: {{ recipe.prep_time }} </p> 
+ <p>Cooking Time: {{ recipe.cooking_time}} </p> 
+ <p>ingredients: {{recipe.ingredients}}</p>
+ <p>ingredients: {{recipe.instructions}}</p>
+ </div>
+  
+  {% endfor %}
+
+
+
+
 {% endblock %}
