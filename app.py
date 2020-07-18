@@ -15,42 +15,34 @@ print(os.getenv('MONGO_URI'))
 mongo = PyMongo(app)
 
 @app.route("/")
-@app.route('/get_recipes')
 def get_recipes():
     recipes=mongo.db.recipes.find(),
     categories=mongo.db.categories.find(),
     return render_template("landingpage.html")
 
-@app.route('/search_recipes')
-def search_recipes():
-    recipes=mongo.db.recipes.find()
-    return render_template("/searchrecipes.html", recipes=mongo.db.recipes.find(), categories=mongo.db.categories.find())
-
-@app.route('/display_recipe/<recipe_id>')
-def display_recipe(recipe_id):
-    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    all_categories = mongo.db.categories.find()
-    return render_template("displayrecipe.html", recipe=the_recipe,
-                                categories=all_categories)
 
 
 
-@app.route('/add_recipe')
+
+
+
+
+@app.route('/addrecipe')
 def add_recipe():
     return render_template("addrecipe.html", categories=mongo.db.categories.find())
     
-@app.route('/insert_recipe', methods=['POST'])
+@app.route('/insertrecipe', methods=['POST'])
 def insert_recipe():
     recipes=mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('show_recipe')) 
      # only redirected to show_recipe for test purposes 
 
-@app.route('/show_recipe')
+@app.route('/showrecipe')
 def show_recipe():
     return render_template("showrecipe.html", recipes=mongo.db.recipes.find())
 
-@app.route('/delete_recipe/ <recipe_id>')
+@app.route('/deleterecipe/ <recipe_id>')
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     return redirect(url_for('show_recipe'))
