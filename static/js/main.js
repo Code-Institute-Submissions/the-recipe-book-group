@@ -1,5 +1,5 @@
-# code from Materialize 
-# dropdown feature code from materialize
+
+// dropdown feature code from materialize
 
 $(document).ready(function(){
         $('select').material_select();
