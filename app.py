@@ -18,7 +18,7 @@ mongo = PyMongo(app)
 def get_recipes():
     recipes=mongo.db.recipes.find(),
     categories=mongo.db.categories.find(),
-    return render_template("landingpage.html")
+    return render_template("index.html")
 
 
 
