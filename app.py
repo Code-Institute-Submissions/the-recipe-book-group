@@ -21,12 +21,6 @@ def get_recipes():
     return render_template("index.html")
 
 
-
-
-
-
-
-
 @app.route('/addrecipe')
 def add_recipe():
     return render_template("addrecipe.html", categories=mongo.db.categories.find())
@@ -38,14 +32,22 @@ def insert_recipe():
     return redirect(url_for('show_recipe')) 
      # only redirected to show_recipe for test purposes 
 
-@app.route('/showrecipe')
-def show_recipe():
-    return render_template("showrecipe.html", recipes=mongo.db.recipes.find())
+
+
+@app.route('/editrecipe/ <recipe_id>')
+def edit_recipe(recipe_id):
+    the_recipe=mongo.db.recipes.find_one({"_id: ObjectId(recipe_id)"})
+    all_categories=mongo.db.categories.find()
+    return render_template('editrecipe.html', recipe=the_recipe , categories=all_categories)
+
+@app.route('/recipelist')
+def recipe_list():
+    return render_template("recipelist.html", recipes=mongo.db.recipes.find())
 
 @app.route('/deleterecipe/ <recipe_id>')
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    return redirect(url_for('show_recipe'))
+    return redirect(url_for('recipe_list'))
 
 
 
