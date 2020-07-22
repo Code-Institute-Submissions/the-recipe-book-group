@@ -127,6 +127,8 @@ Google fonts wil be used thoughout. The font-familes will be indie fl
 
 This repository was created using the [Code Institute Gitpod Template](https://github.com/Code-Institute-Org/gitpod-full-template) and the README.md file and wireframes were copied to this repository. For version control please kindly see [the-cook-book-group](https://github.com/andershup/the-cook-book-group)
 
+No "git push" commands were used until after commit 3efcdfc12417a64241343ce24c82a6d3d547a34b. I had Heroku directly connected and auto deployment set and so I thought I was not necessary to git push.
+
 ## Disclaimer
 
 

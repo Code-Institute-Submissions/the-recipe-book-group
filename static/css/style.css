@@ -1,1 +1,14 @@
+.body-container {
+    height: 95vh;
+	background: url("/static/images/landing_page.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.add_recipe_button {
+   
+    color: white;
+}
 
