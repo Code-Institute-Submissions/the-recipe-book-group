@@ -21,17 +21,17 @@
        
       </ul>
        <!-- Dropdown Trigger -->
-      <a class='dropdown-button btn right' href='#' data-activates='dropdown1'>Drop Me!</a>
+      <a class='transparent dropdown-button btn right' href='#' data-activates='dropdown1'>I Want to.....</a>
     </div>
      
   <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
+  <ul id='dropdown1' class='transparent dropdown-content'>
+    <li><a href="{{url_for('show_index')}}"><i class="material-icons">view_module</i>HOME</a></li>
     <li class="divider"></li>
-    <li><a href="#!">three</a></li>
-    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+    <li><a href="{{ url_for('add_recipe')}}">Recipe List</a></li>
+    <li class="divider"></li>
+    <li><a href="{{ url_for('recipe_list')}}">Add Recipe</a></li>
+    <li class="divider"></li>
   </ul>
   </nav>
     {% block content %} 

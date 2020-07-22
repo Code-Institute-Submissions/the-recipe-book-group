@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<div class="add_header">
+<div class="container-fluid add_recipe_container">
+<div>
 <h3>ADD RECIPE:</h3>
 </div>
 <!--code adapted from Materialize-->
- <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
+ <form action="{{ url_for('insert_recipe') }}" method="POST" class="transparent col s12">
 <div class="row">
   <div class="input-field col s12">
     <select id="category" name="category_name">
@@ -92,7 +92,7 @@
  
     </form>
 
-
+</div>
 <!-- Icons:
 
 library_book

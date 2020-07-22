@@ -13,14 +13,41 @@ html, body {
 	background-size: cover;
 }
 
+
+
+.add_recipe_container {
+    height: 95vh;
+	background: url("/static/images/wood-2142241_1280.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 .add_recipe_button {
    
     color: white;
 }
 
+.recipe_list_container {
+     height: 95vh;
+	background: url("/static/images/wood-2142308_1280.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 nav {
     background-color: #cccccc;
 }
+
+.dropdown-button {
+    height: 100%;
+    
+}
+
+
 
 footer {
      position: fixed;
