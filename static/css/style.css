@@ -1,6 +1,12 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
 .body-container {
     height: 95vh;
-	background: url("/static/images/landing_page.jpg") no-repeat center center fixed;
+	background: url("/static/images/bell-pepper-2179100_1920.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -11,4 +17,20 @@
    
     color: white;
 }
+
+nav {
+    background-color: #cccccc;
+}
+
+footer {
+     position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+height: 5vh;
+background-color: #E9E0DB;
+
+}
+
+
 
