@@ -7,15 +7,15 @@
 
 
  <div class="row">
+  <a href="{{ url_for('show_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Show This Recipe</a>
+  
   <p>Recipe Name:{{recipe.recipe_name}}</p>
   <p>Added by:{{recipe.added_by}}</p>
 
- <p>Category:{{recipe.category_name}}
+ <p>Category:{{recipe.category_name}}</p>
  </div>
 
- <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Show This Recipe</a>
-  <a href="{{ url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Edit</a>
-  <a href="{{ url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Delete</a>
+
 
   {% endfor %}
 

@@ -36,6 +36,11 @@ def insert_recipe():
 def recipe_list():
     return render_template("recipelist.html", recipes=mongo.db.recipes.find())
 
+@app.route('/recipepage/ <recipe_id>')
+def show_recipe(recipe_id):
+    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template('recipepage.html', recipe=the_recipe)
+
 
 @app.route('/editrecipe/ <recipe_id>')
 def edit_recipe(recipe_id):
