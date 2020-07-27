@@ -15,7 +15,7 @@
  <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
 <div class="row">
   <div class="input-field col s12">
-    <select id="category" name="category_name">
+    <select id="category" name="category_name" required>
       <option value="" disabled selected>Choose Category</option>
       {% for cat in categories %}
       {% if cat.category_name == recipe.category_name %}
@@ -31,31 +31,31 @@
    <div class="row">
         <div class="input-field col s4">
           <i class="material-icons prefix">face</i>
-          <input id="added_by" name="added_by" type="text" class="validate" value="{{recipe.added_by}}">
+          <input id="added_by" name="added_by" type="text" class="validate" value="{{recipe.added_by}}" required>
           <label>Created by:</label>
         </div>
     </div>
       <div class="row">
         <div class="input-field col s4">
           <i class="material-icons prefix">add_box</i>
-          <input id="recipe_name" name="recipe_name" type="text" class="validate" value="{{recipe.recipe_name}}">
+          <input id="recipe_name" name="recipe_name" type="text" class="validate" value="{{recipe.recipe_name}}" required>
           <label>Name of Recipe</label>
         </div>
     </div>
      <div class="row">
      <div class="input-field col s2">
           <i class="material-icons prefix">group</i>
-          <input id="icon_prefix" name="serves" type="number" class="validate" value="{{recipe.serves}}">
+          <input id="icon_prefix" name="serves" type="number" class="validate" value="{{recipe.serves}}" required>
           <label for="icon_prefix">Serves</label>
         </div>
         <div class="input-field col s2">
           <i class="material-icons prefix">timer</i>
-          <input id="icon_prefix" name="prep_time" type="number" class="validate" value="{{recipe.prep_time}}">
+          <input id="icon_prefix" name="prep_time" type="number" class="validate" value="{{recipe.prep_time}}" required>
           <label for="icon_prefix">Prep Time</label>
         </div>
         <div class="input-field col s2">
           <i class="material-icons prefix">hot_tub</i>
-          <input id="cooking_time" name="cooking_time" type="number" class="validate" value="{{recipe.cooking_time}}">
+          <input id="cooking_time" name="cooking_time" type="number" class="validate" value="{{recipe.cooking_time}}" required>
           <label for="icon_prefix">Cooking Time</label>
         </div>
     
@@ -64,7 +64,7 @@
     <div class="row">
     <div class="input-field col s8">
           <i class="material-icons prefix">list</i>
-          <input id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}">
+          <input id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}" required>
           <label for="icon_prefix">ingredients</label>
         </div>
     
@@ -73,7 +73,7 @@
       <div class="row">
     <div class="input-field col s8">
           <i class="material-icons prefix">assignment</i>
-          <input id="instructions" name="instructions" type="text" class="validate" value="{{recipe.instructions}}">
+          <input id="instructions" name="instructions" type="text" class="validate" value="{{recipe.instructions}}" required>
           <label for="icon_prefix">Instructions</label>
         </div>
     
