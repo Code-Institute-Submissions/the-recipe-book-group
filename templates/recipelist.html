@@ -1,22 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container-fluid recipe_list_container"></div>
+<body class="container-fluid recipe_list_container">
 
  {% for recipe in recipes %}
 
 
  <div class="row">
-  <a href="{{ url_for('show_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Show This Recipe</a>
-  
+ 
+  <div class="list_wrapper">
   <p>Recipe Name:{{recipe.recipe_name}}</p>
+  </div>
+  <div class="list_wrapper">
   <p>Added by:{{recipe.added_by}}</p>
-
+  </div>
+<div class="list_wrapper">
  <p>Category:{{recipe.category_name}}</p>
  </div>
+ <div class="list_wrapper">
+  <a href="{{ url_for('show_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Show This Recipe</a>
+  </div>
+ </body>
 
 
 
   {% endfor %}
-
+</div>
   {% endblock %}

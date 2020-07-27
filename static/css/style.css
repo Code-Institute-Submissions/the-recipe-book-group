@@ -31,7 +31,7 @@ html, body {
 
 .recipe_list_container {
      height: 95vh;
-	background: url("/static/images/wood-2142308_1280.jpg") no-repeat center center fixed;
+	background: url("/static/images/wood-2142308_1280.jpeg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -47,6 +47,13 @@ nav {
     
 }
 
+.list_wrapper {
+    text-align: center;
+}
+
+.list_wrapper > p a {
+    display: inline-block;
+}
 
 
 footer {
