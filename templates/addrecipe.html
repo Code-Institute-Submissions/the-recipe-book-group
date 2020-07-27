@@ -3,8 +3,14 @@
 {% block content %}
 <body class="container-fluid add_recipe_container">
 <div>
-<h3>ADD RECIPE:</h3>
+<h3 class="add-recipe-title">ADD RECIPE:</h3>
 </div>
+<!--code adapted from W3schools.com-->
+<form action="/action_page.php">
+  <label for="img">Select image:</label>
+  <input type="file" id="img" name="img" accept="image/*">
+  <input type="submit">
+</form>
 <!--code adapted from Materialize-->
  <form action="{{ url_for('insert_recipe') }}" method="POST" class="transparent col s12">
 <div class="row">

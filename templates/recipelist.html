@@ -8,16 +8,16 @@
 
  <div class="row">
  
-  <div class="list_wrapper">
+  <div class="text-wrapper">
   <p>Recipe Name:{{recipe.recipe_name}}</p>
   </div>
-  <div class="list_wrapper">
+  <div class="text-wrapper">
   <p>Added by:{{recipe.added_by}}</p>
   </div>
-<div class="list_wrapper">
+<div class="text-wrapper">
  <p>Category:{{recipe.category_name}}</p>
  </div>
- <div class="list_wrapper">
+ <div class="text-wrapper">
   <a href="{{ url_for('show_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Show This Recipe</a>
   </div>
  </body>

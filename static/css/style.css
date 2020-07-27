@@ -24,9 +24,11 @@ html, body {
 	background-size: cover;
 }
 
-.add_recipe_button {
-   
+
+.index-text {
     color: white;
+    font-size: 10vh;
+    font-family: cursive;
 }
 
 .recipe_list_container {
@@ -47,11 +49,11 @@ nav {
     
 }
 
-.list_wrapper {
+.text-wrapper {
     text-align: center;
 }
 
-.list_wrapper > p a {
+.text-wrapper > p a  a > i {
     display: inline-block;
 }
 

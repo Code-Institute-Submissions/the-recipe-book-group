@@ -3,7 +3,7 @@
 
 $(document).ready(function(){
         $('select').material_select();
-        });
+        
 
       $('.dropdown-button').dropdown({
       inDuration: 1500,
@@ -15,5 +15,9 @@ $(document).ready(function(){
       alignment: 'left', // Displays dropdown with edge aligned to the left of button
       stopPropagation: false // Stops event propagation
     });
+    });
+
+
+   
 
 
