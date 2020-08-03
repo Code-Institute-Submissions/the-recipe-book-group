@@ -96,4 +96,27 @@ hourglass_empty
 hourglass_full
 -->
 
+<!--Possible api code:
+<form action="http://example.com/" method="POST">
+  <input type="hidden" name="q" value="a">
+</form>
+
+
+
+// Sending and receiving data in JSON format using POST method
+//
+var xhr = new XMLHttpRequest();
+var url = "https://api.edamam.com/api/nutrition-details?app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}";
+xhr.open("POST", url, true);
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        var json = JSON.parse(xhr.responseText);
+        
+    }
+};
+var data = JSON.stringify({INEEDTOPUTTHEFORMSUBMITHERE});
+xhr.send(data);
+-->
+
 {% endblock %}

@@ -5,7 +5,7 @@ html, body {
 
 
 .body-container {
-    height: 95vh;
+    height: 90vh;
 	background: url("/static/images/bell-pepper-2179100_1920.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -16,7 +16,7 @@ html, body {
 
 
 .add_recipe_container {
-    height: 95vh;
+    height: 90vh;
 	background: url("/static/images/wood-2142241_1280.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -32,7 +32,7 @@ html, body {
 }
 
 .recipe_list_container {
-     height: 95vh;
+     height: 90vh;
 	background: url("/static/images/wood-2142308_1280.jpeg") no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -43,6 +43,7 @@ html, body {
 nav {
     background-color: #cccccc;
     font-family: fantasy;
+
 }
 
 .dropdown-button {
