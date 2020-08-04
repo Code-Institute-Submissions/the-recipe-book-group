@@ -5,19 +5,13 @@
 <div>
 <h3 class="add-recipe-title">ADD RECIPE:</h3>
 </div>
-<!--code adapted from W3schools.com-->
-<form action="/action_page.php">
-  <label for="img">Select image:</label>
-  <input type="file" id="img" name="img" accept="image/*">
-  <input type="submit">
-</form> 
-<!--end-->
+
 <!--code adapted from Materialize-->
  <form action="{{ url_for('insert_recipe') }}" method="POST" class="transparent col s12">
  <div class="row wrapper-row">
  <div class="col s6">
  <div class="row">
-  <div class="input-field col s4" required>
+  <div class="input-field col s5" required>
     <select id="category" name="category_name">
       <option value="" disabled selected>Choose Category</option>
       {% for cat in categories %}
@@ -28,14 +22,14 @@
   </div>
   </div>
    <div class="row">
-        <div class="input-field col s4">
+        <div class="input-field">
           <i class="material-icons prefix">face</i>
           <input id="added_by" name="added_by" type="text" class="validate" required>
           <label>Your Name:</label>
         </div>
     </div>
       <div class="row">
-        <div class="input-field col s4">
+        <div class="input-field">
           <i class="material-icons prefix">add_box</i>
           <input id="recipe_name" name="recipe_name" type="text" class="validate" required>
           <label>Name of Recipe</label>
@@ -52,15 +46,27 @@
           <input id="icon_prefix" name="prep_time" type="number" class="validate" required>
           <label for="icon_prefix">Prep Time</label>
         </div>
-     </div>
-     <div class="row">
-        <div class="input-field col s2">
+    
+     
+        <div class="input-field col s3">
           <i class="material-icons prefix">hot_tub</i>
           <input id="cooking_time" name="cooking_time" type="number" class="validate" required>
           <label for="icon_prefix">Cooking Time</label>
         </div>
-    
+     </div>
+   
     </div>
+    <!--code adapted from W3schools.com-->
+<form action="/action_page.php">
+  <label for="img">Select image:</label>
+  <input type="file" id="img" name="img" accept="image/*">
+  <input type="submit">
+</form> 
+<!--end-->
+    <div class="col s4 image-box">
+    <input type="text" id="photo" name="photo">
+    <label for="photo">Include Image URL</label>
+    
     </div>
     </div>
     
@@ -127,5 +133,26 @@ xhr.onreadystatechange = function () {
 var data = JSON.stringify({INEEDTOPUTTHEFORMSUBMITHERE});
 xhr.send(data);
 -->
+
+<!--Images as links
+<a href="default.asp">
+  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
+-->
+
+<!--Yeah they add the path... so something like this:
+
+
+<input type="text" id="photo" name="photo">
+<label for="photo">Include Image URL</label>
+
+
+Then on the box, the user puts in the cat image url I sent for example.
+And then that literally saves on your database as the "string".
+
+So then when viewing the output from the database:
+-->
+
+
 
 {% endblock %}
