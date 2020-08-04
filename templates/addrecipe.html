@@ -14,8 +14,10 @@
 <!--end-->
 <!--code adapted from Materialize-->
  <form action="{{ url_for('insert_recipe') }}" method="POST" class="transparent col s12">
-<div class="row">
-  <div class="input-field col s12" required>
+ <div class="row wrapper-row">
+ <div class="col s6">
+ <div class="row">
+  <div class="input-field col s4" required>
     <select id="category" name="category_name">
       <option value="" disabled selected>Choose Category</option>
       {% for cat in categories %}
@@ -50,6 +52,8 @@
           <input id="icon_prefix" name="prep_time" type="number" class="validate" required>
           <label for="icon_prefix">Prep Time</label>
         </div>
+     </div>
+     <div class="row">
         <div class="input-field col s2">
           <i class="material-icons prefix">hot_tub</i>
           <input id="cooking_time" name="cooking_time" type="number" class="validate" required>
@@ -57,6 +61,9 @@
         </div>
     
     </div>
+    </div>
+    </div>
+    
 
   <div class="row">
         <div class="input-field col s12">
@@ -101,7 +108,9 @@ hourglass_full
   <input type="hidden" name="q" value="a">
 </form>
 
-
+<script>
+var path = "https://api.edamam.com/api/nutrition-details";
+</script>
 
 // Sending and receiving data in JSON format using POST method
 //
