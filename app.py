@@ -60,7 +60,6 @@ def update_recipe(recipe_id):
         'serves': request.form.get('serves'),
         'prep_time': request.form.get('prep_time'),
         'cooking_time': request.form.get('cooking_time'),
-        'prep_time': request.form.get('prep_time'),
         'ingredients': request.form.get('ingredients'),
         'instructions': request.form.get('instructions')
     })

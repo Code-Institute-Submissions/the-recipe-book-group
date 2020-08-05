@@ -1,25 +1,22 @@
-
-
 {% extends 'base.html' %}
 <!--inject the followig into parent template-->
 
-
 {% block content %}
 
-
-  <body class="body-container">
-   <div class="row text-wrapper">
-  <a href="{{ url_for('recipe_list')}}" class="index-text">See our Recipes</a>
-  
+<body class="index-container">
+<div class="row click-here-text">
+click here to...
 </div>
   <div class="row text-wrapper">
-  <a href="{{ url_for('add_recipe')}}" class="index-text">Add Your Recipe</a>
- </div>
+    <a href="{{ url_for('recipe_list')}}" class="index-text">See our Recipes</a>
+  </div>
+  <div class="row text-wrapper">
+    <a href="{{ url_for('add_recipe')}}" class="index-text">Add Your Recipe</a>
+  </div>
 
-      <footer>
-       &copy Anders Olesen
-</footer> 
+  <footer>
+    &copy Anders Olesen
+  </footer>
 </body>
 
 {% endblock %}
-

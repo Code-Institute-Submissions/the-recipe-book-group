@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
 
-
+<title>The-cook-book-group</title>
 
 
 </head>
@@ -21,16 +21,16 @@
        
       </ul>
        <!-- Dropdown Trigger -->
-      <a class='transparent dropdown-button btn right' href='#' data-activates='dropdown1'>I Want to.....</a>
+      <a class="transparent dropdown-button btn left" href='#' data-activates='dropdown1'>I Want to.....</a>
     </div>
      
   <!-- Dropdown Structure -->
   <ul id='dropdown1' class='transparent dropdown-content'>
-    <li><a href="{{url_for('show_index')}}"><i class="material-icons">view_module</i>HOME</a></li>
+    <li><a href="{{url_for('show_index')}}" class="black-text">Go Home</a></li>
     <li class="divider"></li>
-    <li><a href="{{ url_for('add_recipe')}}">Add Recipe</a></li>
+    <li><a href="{{ url_for('add_recipe')}}" class="black-text">Add Recipe</a></li>
     <li class="divider"></li>
-    <li><a href="{{ url_for('recipe_list')}}">See our Recipes</a></li>
+    <li><a href="{{ url_for('recipe_list')}}" class="black-text">See our Recipes</a></li>
     <li class="divider"></li>
   </ul>
   </nav>
