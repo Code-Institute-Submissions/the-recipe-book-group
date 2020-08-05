@@ -15,7 +15,7 @@ html, body {
 
 
 
-.add_recipe_container {
+.add-recipe-container, .edit-recipe-container {
     height: 90vh;
 	background: url("/static/images/wood-2142241_1280.jpg") no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -31,7 +31,7 @@ html, body {
     font-family: cursive;
 }
 
-.recipe_list_container {
+.recipe-list-container, .show-recipe-container {
      height: 90vh;
 	background: url("/static/images/wood-2142308_1280.jpeg") no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -39,6 +39,8 @@ html, body {
 	-o-background-size: cover;
 	background-size: cover;
 }
+
+
 
 nav {
     background-color: #cccccc;
