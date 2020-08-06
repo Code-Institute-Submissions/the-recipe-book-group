@@ -36,6 +36,7 @@ def insert_recipe():
 def recipe_list():
     return render_template("recipelist.html", recipes=mongo.db.recipes.find())
 
+
 @app.route('/recipepage/ <recipe_id>')
 def show_recipe(recipe_id):
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -64,6 +65,7 @@ def update_recipe(recipe_id):
         'instructions': request.form.get('instructions')
     })
     return redirect(url_for('recipe_list'))
+
 
 @app.route('/deleterecipe/ <recipe_id>')
 def delete_recipe(recipe_id):
