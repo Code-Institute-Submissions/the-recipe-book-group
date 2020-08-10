@@ -14,14 +14,24 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 print(os.getenv('MONGO_URI'))
 mongo = PyMongo(app)
 
-
+#landing page
 @app.route("/")
 def show_index():
+    """
+    reders landing page
+    """
     return render_template("index.html")
 
+@app.route('/testextend')
+def extend():
+    return render_template("testextend.html")
 
+#Adding/posting recipe
 @app.route('/recipe/add', methods=["POST", "GET"])
 def add_recipe():
+    """
+    adds recipe to mongodb collection and then displays to list of recipes page
+    """
     recipes = mongo.db.recipes
 
     if request.method == "POST":
@@ -30,29 +40,41 @@ def add_recipe():
         
     return render_template("addrecipe.html", categories=mongo.db.categories.find())
 
-
+#list of recipes
 @app.route('/recipelist')
 def recipe_list():
+    """
+    will render the complete list of recipes
+    """
     return render_template("recipelist.html", recipes=mongo.db.recipes.find())
 
-
+#recipe page
 @app.route('/recipepage/ <recipe_id>')
 def show_recipe(recipe_id):
+    """
+    will show the full details of an individual recipe
+    """ 
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     all_categories = mongo.db.categories.find()
     return render_template('recipepage.html', recipe=the_recipe,
                                     categories=all_categories)
 
-
+#edit recipe
 @app.route('/editrecipe/ <recipe_id>')
 def edit_recipe(recipe_id):
+    """
+    will allow the user to edit a particular recipe. Recipe reposted on submit
+    """
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     all_categories = mongo.db.categories.find()
     return render_template('editrecipe.html', recipe=the_recipe, categories=all_categories)
 
-
+#update recipe
 @app.route('/updaterecipe/ <recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
+    """
+    updates edited recipes to mongo.db and displays on recipe list
+    """
     recipes = mongo.db.recipes
     recipes.update({'_id': ObjectId(recipe_id)},
                    {
@@ -67,9 +89,12 @@ def update_recipe(recipe_id):
     })
     return redirect(url_for('recipe_list'))
 
-
+#delete recipe
 @app.route('/deleterecipe/ <recipe_id>')
 def delete_recipe(recipe_id):
+    """
+    allow user to delete any recipe
+    """
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     return redirect(url_for('recipe_list'))
 
