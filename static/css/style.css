@@ -78,6 +78,13 @@ nav {
   display: inline-block;
 }
 
+.list-button {
+    background-color: #4e5d5b;
+}
+
+.list-button:hover {
+    background-color: #02353196;
+}
 .ingredients-text,
 .instructions-text {
   padding: 5px 50px;

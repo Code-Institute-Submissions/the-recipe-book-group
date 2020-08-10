@@ -54,7 +54,7 @@ def show_recipe(recipe_id):
     """
     will show the full details of an individual recipe
     """ 
-    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    the_recipe = mongo.db.recipes.find_one_or_404({"_id": ObjectId(recipe_id)})
     all_categories = mongo.db.categories.find()
     return render_template('recipepage.html', recipe=the_recipe,
                                     categories=all_categories)
@@ -65,7 +65,7 @@ def edit_recipe(recipe_id):
     """
     will allow the user to edit a particular recipe. Recipe reposted on submit
     """
-    the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    the_recipe = mongo.db.recipes.find_one_or_404({"_id": ObjectId(recipe_id)})
     all_categories = mongo.db.categories.find()
     return render_template('editrecipe.html', recipe=the_recipe, categories=all_categories)
 
