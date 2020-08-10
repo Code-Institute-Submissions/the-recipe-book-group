@@ -20,16 +20,15 @@ def show_index():
     return render_template("index.html")
 
 
-@app.route('/addrecipe')
+@app.route('/recipe/add', methods=["POST", "GET"])
 def add_recipe():
-    return render_template("addrecipe.html", categories=mongo.db.categories.find())
-
-
-@app.route('/insertrecipe', methods=['POST'])
-def insert_recipe():
     recipes = mongo.db.recipes
-    recipes.insert_one(request.form.to_dict())
-    return redirect(url_for('recipe_list'))
+
+    if request.method == "POST":
+        recipes.insert_one(request.form.to_dict())
+        return redirect(url_for('recipe_list'))
+        
+    return render_template("addrecipe.html", categories=mongo.db.categories.find())
 
 
 @app.route('/recipelist')
@@ -40,7 +39,9 @@ def recipe_list():
 @app.route('/recipepage/ <recipe_id>')
 def show_recipe(recipe_id):
     the_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template('recipepage.html', recipe=the_recipe)
+    all_categories = mongo.db.categories.find()
+    return render_template('recipepage.html', recipe=the_recipe,
+                                    categories=all_categories)
 
 
 @app.route('/editrecipe/ <recipe_id>')
