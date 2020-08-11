@@ -51,7 +51,8 @@ def recipe_list():
     """
     will render the complete list of recipes
     """
-    return render_template("pages/recipelist.html", recipes=mongo.db.recipes.find())
+    return render_template("pages/recipelist.html",
+                           recipes=mongo.db.recipes.find())
 
 
 # recipe page
