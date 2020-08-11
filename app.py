@@ -15,7 +15,7 @@ print(os.getenv('MONGO_URI'))
 mongo = PyMongo(app)
 
 
-#landing page
+# landing page
 @app.route("/")
 def show_index():
     """
@@ -29,7 +29,7 @@ def extend():
     return render_template("testextend.html")
 
 
-#Adding/posting recipe
+# Adding/posting recipe
 @app.route('/recipe/add', methods=["POST", "GET"])
 def add_recipe():
     """
@@ -45,7 +45,7 @@ def add_recipe():
                            categories=mongo.db.categories.find())
 
 
-#list of recipes
+# list of recipes
 @app.route('/recipelist')
 def recipe_list():
     """
@@ -54,7 +54,7 @@ def recipe_list():
     return render_template("pages/recipelist.html", recipes=mongo.db.recipes.find())
 
 
-#recipe page
+# recipe page
 @app.route('/recipepage/ <recipe_id>')
 def show_recipe(recipe_id):
     """
@@ -66,7 +66,7 @@ def show_recipe(recipe_id):
                            zcategories=all_categories)
 
 
-#edit recipe
+# edit recipe
 @app.route('/editrecipe/ <recipe_id>')
 def edit_recipe(recipe_id):
     """
@@ -78,7 +78,7 @@ def edit_recipe(recipe_id):
                            categories=all_categories)
 
 
-#update recipe
+# update recipe
 @app.route('/updaterecipe/ <recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
     """
@@ -99,7 +99,7 @@ def update_recipe(recipe_id):
     return redirect(url_for('pages/recipe_list'))
 
 
-#delete recipe
+# delete recipe
 @app.route('/deleterecipe/ <recipe_id>')
 def delete_recipe(recipe_id):
     """

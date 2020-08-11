@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="center brand-logo">The Recipe Cook Book Group</a>
+      <ul id="nav-mobile" class="center hide-on-med-and-down">
+       
+      </ul>
+       <!-- Dropdown Trigger -->
+      <a href="#" class="transparent dropdown-button btn left"  data-activates="dropdown1"> I Want to.....</a>
+    </div>
+     
+  <!-- Dropdown Structure -->
+  <ul id="dropdown1" class="transparent dropdown-content">
+    <li><a href="{{url_for('show_index')}}" class="black-text">Go Home</a></li>
+    <li class="divider"></li>
+    <li><a href="{{ url_for('add_recipe')}}" class="black-text">Add Recipe</a></li>
+    <li class="divider"></li>
+    <li><a href="{{ url_for('recipe_list')}}" class="black-text">See our Recipes</a></li>
+    <li class="divider"></li>
+  </ul>
+  </nav>
+
+  
