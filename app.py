@@ -14,17 +14,20 @@ app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 print(os.getenv('MONGO_URI'))
 mongo = PyMongo(app)
 
+
 #landing page
 @app.route("/")
 def show_index():
     """
     reders landing page
     """
-    return render_template("index.html")
+    return render_template("pages/index.html")
+
 
 @app.route('/testextend')
 def extend():
     return render_template("testextend.html")
+
 
 #Adding/posting recipe
 @app.route('/recipe/add', methods=["POST", "GET"])
@@ -36,9 +39,11 @@ def add_recipe():
 
     if request.method == "POST":
         recipes.insert_one(request.form.to_dict())
-        return redirect(url_for('recipe_list'))
-        
-    return render_template("addrecipe.html", categories=mongo.db.categories.find())
+        return redirect(url_for('pages/recipe_list'))
+
+    return render_template("pages/addrecipe.html",
+                           categories=mongo.db.categories.find())
+
 
 #list of recipes
 @app.route('/recipelist')
@@ -46,18 +51,20 @@ def recipe_list():
     """
     will render the complete list of recipes
     """
-    return render_template("recipelist.html", recipes=mongo.db.recipes.find())
+    return render_template("pages/recipelist.html", recipes=mongo.db.recipes.find())
+
 
 #recipe page
 @app.route('/recipepage/ <recipe_id>')
 def show_recipe(recipe_id):
     """
     will show the full details of an individual recipe
-    """ 
+    """
     the_recipe = mongo.db.recipes.find_one_or_404({"_id": ObjectId(recipe_id)})
     all_categories = mongo.db.categories.find()
-    return render_template('recipepage.html', recipe=the_recipe,
-                                    categories=all_categories)
+    return render_template('pages/recipepage.html', recipe=the_recipe,
+                           zcategories=all_categories)
+
 
 #edit recipe
 @app.route('/editrecipe/ <recipe_id>')
@@ -67,7 +74,9 @@ def edit_recipe(recipe_id):
     """
     the_recipe = mongo.db.recipes.find_one_or_404({"_id": ObjectId(recipe_id)})
     all_categories = mongo.db.categories.find()
-    return render_template('editrecipe.html', recipe=the_recipe, categories=all_categories)
+    return render_template('pages/editrecipe.html', recipe=the_recipe,
+                           categories=all_categories)
+
 
 #update recipe
 @app.route('/updaterecipe/ <recipe_id>', methods=["POST"])
@@ -87,7 +96,8 @@ def update_recipe(recipe_id):
         'ingredients': request.form.get('ingredients'),
         'instructions': request.form.get('instructions')
     })
-    return redirect(url_for('recipe_list'))
+    return redirect(url_for('pages/recipe_list'))
+
 
 #delete recipe
 @app.route('/deleterecipe/ <recipe_id>')
@@ -96,7 +106,7 @@ def delete_recipe(recipe_id):
     allow user to delete any recipe
     """
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    return redirect(url_for('recipe_list'))
+    return redirect(url_for('pages/recipe_list'))
 
 
 if __name__ == '__main__':
