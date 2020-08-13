@@ -16,17 +16,17 @@
 - [Site Owner Goals](#site-owner-goals)
 
 (2) [UI and Design Choices](#ui-and-design-choices)
-- [Design Choices]
-- Fonts
-- Colours
-- Background Images
+- [Design Choices](#design-choices)
+- [Fonts](#fonts)
+- [Colours](#colours)
+- [Background](#background-images)
 
 
 (3) [Wireframes](#wireframes)
 
 (4) [Testing](#testing)
 
-(5) [Bugs and fixes](#bugs-fixes)
+(5) [Bugs and fixes](#bugs-and-fixes)
 
 (6) [Deployment](#deployment)
 
@@ -37,6 +37,8 @@
 (9) [Code](#code)
 
 (10) [Credits](#credits)
+
+(11) [Please Note](#please-note)
 
 (11) [Disclaimer](#disclaimer)
 
@@ -105,9 +107,39 @@ See the wireframes <a href="https://github.com/andershup/the-recipe-book-group/b
 
 [link to testing file]
 
+## Bugs and Fixes
+
 ## DEPLOYMENT
 
+- Create requirements.txt in the terminal:
+```bash
+pip3 freeze > requirements.txt
+```
+* Create a Procfile in the termianl:
+```bash
+echo web: python3 app.py > Procfile
+```
+* Push files to your repository:
+```bash
+git push
+```
+
+
+- Login to Heroku and in the dashboard create a new app.
+- In the depley section select GitHub as the deployment method. 
+- Go to settings and click 'Reveal Config Vars' then set IP: 0.0.0.0 and PORT: 5000.
+- Click 'Open app' to deploy. 
+
+Note:
+Should you need to install the relevant requirements and dependencies use the following command:
+```bash
+pip3 -r requirements.txt 
+```
+
+
 ### How to run this project
+
+
  
 ### All deployment tested on the following
 
@@ -116,7 +148,7 @@ See the wireframes <a href="https://github.com/andershup/the-recipe-book-group/b
 #### SOFTWARE
 
 
-## technology used
+## Technologies used
 
 ### Front-End 
 
@@ -129,7 +161,7 @@ See the wireframes <a href="https://github.com/andershup/the-recipe-book-group/b
 
 - **FLASK** microframework
 - **FLASK-PYMONGO**
-- **DNSPYTHON** for using the new style connection string for MongoDB Atlas
+- **DNSPYTHON** 
 - **HERUKO**
 - **PYTHON**
 - **PYMONGO**
@@ -143,7 +175,9 @@ See the wireframes <a href="https://github.com/andershup/the-recipe-book-group/b
 
 ## CODE
 
-adapted from:
+Some of my code was adapted from:
+- [W3Schools](https://www.w3schools.com/)
+- [Whimsical](https://whimsical.com/)
 
 
  
@@ -158,6 +192,7 @@ This repository was created using the [Code Institute Gitpod Template](https://g
 No "git push" commands were used until after commit 3efcdfc12417a64241343ce24c82a6d3d547a34b. I had Heroku directly connected and auto deployment set and so I thought I was not necessary to git push.
 
 ## Disclaimer
+All content within this website are for educational purposes only.
 
 
 
