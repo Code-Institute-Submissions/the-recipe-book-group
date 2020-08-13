@@ -19,7 +19,7 @@ mongo = PyMongo(app)
 @app.route("/")
 def show_index():
     """
-    reders landing page
+    renders landing page
     """
     return render_template("pages/index.html")
 
