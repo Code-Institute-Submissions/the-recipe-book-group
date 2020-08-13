@@ -5,67 +5,101 @@
 <br>
 <br>
 
-# Table of content 
+# Table of content:
 
-1 [Project Purpose](#project-purpose)
+(1) [UX](#ux)
 
-2 [User Stories](#user-stories)
+-  [Project Purpose](#project-purpose)
 
-3 [UX](#ux)
+- [User Stories](#user-stories)
 
-4 [UI](#ui)
+- [Site Owner Goals](#site-owner-goals)
 
-5 [Wireframes](#wireframes)
+(2) [UI and Design Choices](#ui-and-design-choices)
+- [Design Choices]
+- Fonts
+- Colours
+- Background Images
 
-6 [Testing](#testing)
 
-7 [Deployment](#deployment)
+(3) [Wireframes](#wireframes)
 
-8 [Technologies used](#technologies-used)
+(4) [Testing](#testing)
 
-9 [Tools](#tools)
+(5) [Bugs and fixes](#bugs-fixes)
 
-10 [Code](#code)
+(6) [Deployment](#deployment)
+
+(7) [Technologies used](#technologies-used)
+
+(8) [Tools](#tools)
+
+(9) [Code](#code)
+
+(10) [Credits](#credits)
+
+(11) [Disclaimer](#disclaimer)
+
+# UX
 
 ## Project Purpose
 
-1. To build a full stack site that allows all users to manage a common dataset of shared recipes.
-2. To provide an opportunity for the owner to collect all data provided for future use.
+The purpose of this build is to provide a simple to use platform for a group to share recipes and instructions of their use using a common database. 
+This should at the same time allow the site owner to collect data saved to the database.
  
 
-## User stories
+## User Stories
 
 1. As a user, I want to **quickly access the detailed instrucitons for any recipe in the group.** so that I can **cook using the information presented to me**.
-2. As a user, I want to **quickly and easily choose a category whether I am using, adding or editing recipes.** so that I can **narrow down the type of recipe I am intending to use/aad/edit/delete**
-2. As a user, I want to **add my own reicpes to the group and be able to give a clear presentation of the recipe and instructions for its use** so that I can **allow friends and family to enjoy the recipe simply and correctly**
-3. As a user, I want to **alter and ammend any of my recipes if I believe it improves the recipe** so that I can **help the group as a whole improve the recipes** 
-3. As a user, I want to **have a one click solution to analysing the nutritional value of the recipe and have it presented to me in a format that is familiar to me **so that I can **allow the other users to make an informed choice about the nutritional value of my recipe** 
-3. As a user, I want to **be able to easily navigate back to the home as well as between pages**
+2. As a user, I want to **quickly and easily choose a category** so that I can **narrow down the type of recipe I am looking for.**
+3. As a user, I want to **add my own reicpes to the group and be able to give a clear presentation of the recipe and instructions for its use** so that I can **allow friends and family to enjoy the recipe simply and correctly**
+4. As a user, I want to **alter and ammend any of my recipes if I believe it improves the recipe** so that I can **help the group as a whole improve the recipes** 
+5. As a user, I want to **be able to easily navigate back to the home as well as between pages**
 
-## UX
+## Site Owner Goals
 
-* The site is to be constructed according to the D.R.U.D (create, read, use, delete) principle.
-* The site should have it's features emmidiately accesable to a user  
-* The user should have easily accesable recipes and be provided with basic instructions for its use
-* The users should be able to share their recipes with the group. This will include details of the recipe such as ingredients, cooking time, amount of people it serves, cooking instructions etc.
-* The user should be able to add their name to their recipe.
-* The user should be able to add their own image of their recipe.
-* The user should have the option of having their recipe analysed for it's nutrition and it be added to the recipe
-* The user should have the ability to edit or delete all recipes wihtin the group.
-* The site should be easily navigated from page to page as it's purpose will be to assist the user in cooking rather then being their main focus of attention
-* The site should feel clean, simple and most of all intuative to the user as it will be the central hup for a commen family/friends experience
-* The site should be a familar place to return to after the initial intuatively learned experience
+- To have complete access to the collected data within the associated database.
 
-## UI
+
+
+
+## UI and Design Choices
+
+# UI 
 
 - A mobile first approach to design will be used.
 - A navbar with the website title as a central feature. A home button to allow easy navigation back to the main page. A dropdown menu with the main options will feature on the the right side
 - Three simple and clear buttons in the main body of the landing page will provide easy options for lookin up, adding and editing recipes.
 - A footer with basic website information
+- The site should feel clean, simple and most of all intuative to the user as it will be the central hup for a commen family/friends experience
+- The site is to be constructed according to the D.R.U.D (create, read, use, delete) principle.
+- The site should have it's features emmidiately accesable to a user  
+- The user should have easily accesable recipes and be provided with basic instructions for its use
+- The users should be able to share their recipes with the group. This will include details of the recipe such as ingredients, cooking time, amount of people it serves, cooking instructions etc.
+- The user should be able to add their name to their recipe.
+- The user should be able to add their own image of their recipe.
+- The user should have the ability to edit or delete all recipes wihtin the group.
+- The site should be easily navigated from page to page as it's purpose will be to assist the user in cooking rather then being their main focus of attention
+- The site should be a familar place to return to after the initial intuatively learned experience
+
+## Design Choices
+
+## Fonts
+
+Google fonts wil be used thoughout. The font-familes will be indie flower and pangolin as I felt they have a friendly, almost handwritten feel to the site.
+
+## Colours
+
+colourcombos191 used from colour combos,.com
+
+## Background Images
+The background images were chosen to be visually captive and to be an emmidiate indication of the reason and purpose of the website.
+
 
 ## WIREFRAMES
 
-(See wireframes folder)
+Wireframes were constructed using [whimsical Wireframes](https://whimsical.com/wireframes) as it allow me to easily construct both a mobile and desktop version of original concept.
+See the wireframes <a href="https://github.com/andershup/the-recipe-book-group/blob/196ae246d08eeb42e0cca89686e5c49d33c066e4/wireframes">here.</a>
 
 ## TESTING
 
@@ -111,15 +145,7 @@
 
 adapted from:
 
-## Fonts
 
-Google fonts wil be used thoughout. The font-familes will be indie flower and pangolin.
-
-## Colours
-
-colourcombos191 used from colour combos,.com
-
-## Images
  
 ## Inspiration
 
