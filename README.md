@@ -127,7 +127,15 @@ git push
 
 - Login to Heroku and in the dashboard create a new app.
 - In the depley section select GitHub as the deployment method. 
-- Go to settings and click 'Reveal Config Vars' then set IP: 0.0.0.0 and PORT: 5000.
+- Go to settings and click 'Reveal Config Vars' and add the following key/value pairs:
+
+**KEY**|**VALUE**
+-------|---------
+PORT|5000
+IP|0.0.0.0
+MONGO\_URI| mongodb+srv://<username>:<password>@<cluster\_name>-1tddr.azure.mongodb.net/<database\_name>?retryWrites=true&w=majority
+
+
 - Click 'Open app' to deploy. 
 
 Note:
@@ -139,13 +147,30 @@ pip3 -r requirements.txt
 
 ### How to run this project
 
+In the terminal use the following commands:
+```bash
+flask run
+```
+OR
+```bash
+python3 app.py
+``` 
+
 
  
 ### All deployment tested on the following
 
 #### HARDWARE
-
+- Desktop PC
+- MacBook Air
+- Galaxy Tab A
+- Iphone XS
 #### SOFTWARE
+- Windows 10
+- macOS
+- Android 10
+- iOS 12
+
 
 
 ## Technologies used
