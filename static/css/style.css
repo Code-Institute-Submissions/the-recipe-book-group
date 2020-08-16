@@ -30,10 +30,11 @@ body {
     font-size: 4vh;
     text-align: center;
     font-family: cursive;
+    padding-top: 15vh;
 }
 
 .index-text {
-  color: white;
+  color:#672323;
   font-size: 10vh;
   font-family: cursive;
 }
