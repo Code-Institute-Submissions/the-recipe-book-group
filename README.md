@@ -202,7 +202,7 @@ python3 app.py
 
 Some of my code was adapted from:
 - [W3Schools](https://www.w3schools.com/)
-- [Whimsical](https://whimsical.com/)
+- [Stack overflow](https://www.https://stackoverflow.com/)
 
 
  
