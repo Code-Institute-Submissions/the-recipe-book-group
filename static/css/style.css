@@ -1,101 +1,99 @@
 html,
 body {
-  height: 100%;
-  margin: 0;
+	height: 100%;
+	margin: 0;
 }
 
 .index-container {
-  height: 90vh;
-  background: url("/static/images/index.jpg") no-repeat
-    center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	height: 90vh;
+	background: url("/static/images/index.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .add-recipe-container,
 .edit-recipe-container {
-  height: 90vh;
-  background: url("/static/images/wood-2142241_1280.jpg") no-repeat center
-    center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	height: 90vh;
+	background: url("/static/images/wood-2142241_1280.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .click-here-index-text {
-    color:white;
-    font-size: 4vh;
-    text-align: center;
-    font-family: cursive;
-    padding-top: 15vh;
+	color: white;
+	font-size: 4vh;
+	text-align: center;
+	font-family: cursive;
+	padding-top: 15vh;
 }
 
 .index-text {
-  color:#672323;
-  font-size: 10vh;
-  font-family: cursive;
+	color: #672323;
+	font-size: 10vh;
+	font-family: cursive;
 }
 
 .recipe-list-container {
-  height: 90vh;
-  background: url("/static/images/wood-2142241_1280.jpg") no-repeat center
-    center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	height: 90vh;
+	background: url("/static/images/wood-2142241_1280.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 .show-recipe-container {
-  height: 90vh;
-  background: url("/static/images/wood-2142241_1280.jpg") no-repeat center
-    center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	height: 90vh;
+	background: url("/static/images/wood-2142241_1280.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 nav {
-  background-color: #aaa;
-  font-family: fantasy;
+	background-color: #aaa;
+	font-family: fantasy;
 }
 
 .dropdown-button {
-  height: 100%;
+	height: 100%;
 }
 
 .text-wrapper,
 .add-recipe-title,
 .edit-heading {
-  text-align: center;
-  font-family: cursive;
+	text-align: center;
+	font-family: cursive;
 }
 
-.text-wrapper > p a a > i {
-  display: inline-block;
+.text-wrapper>p a a>i {
+	display: inline-block;
 }
 
 .list-button {
-    background-color: #4e5d5b;
+	background-color: #4e5d5b;
 }
 
 .list-button:hover {
-    background-color: #02353196;
+	background-color: #02353196;
 }
+
 .ingredients-text,
 .instructions-text {
-  padding: 5px 50px;
+	padding: 5px 50px;
 }
 
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 5vh;
-  background-color: #e9e0db;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 5vh;
+	background-color: #e9e0db;
+    z-index: +1;
 }
