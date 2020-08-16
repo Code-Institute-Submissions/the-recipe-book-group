@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-
-<head>
-  {% include 'layout/head.html' %}
-</head>
-
-  <nav>
-    {% include 'layout/navbar.html' %}
-  </nav>
-  {% block content %} {% endblock %}
-
-  {% include 'layout/scriptssrc.html' %} 
-  {% include 'layout/footer.html' %} 
- 
-
+<html lang="en">
+   <head>
+      {% include 'layout/head.html' %}
+   </head>
+   <nav>
+      {% include 'layout/navbar.html' %}
+   </nav>
+   {% block content %} {% endblock %}
+   {% include 'layout/scriptssrc.html' %} 
+   {% include 'layout/footer.html' %} 
+</html>
