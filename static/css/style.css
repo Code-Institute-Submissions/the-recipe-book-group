@@ -6,7 +6,7 @@ body {
 
 .index-container {
   height: 90vh;
-  background: url("/static/images/bell-pepper-2179100_1920.jpg") no-repeat
+  background: url("/static/images/index.jpg") no-repeat
     center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -25,7 +25,7 @@ body {
   background-size: cover;
 }
 
-.click-here-text {
+.click-here-index-text {
     color:white;
     font-size: 4vh;
     text-align: center;
