@@ -143,16 +143,29 @@ pip3 -r requirements.txt
 ```
 
 
-### How to run this project
-
+### How to run this project in the terminal:  
+```bash 
+flask run
+```
+OR
+```bash
+python3 app.py
+```
 
  
 ### All deployment tested on the following
 
 #### HARDWARE
+- Desktop PC
+- MacBook Air
+- Galaxy Tab A
+- Iphone X
 
 #### SOFTWARE
-
+- windows 10
+- OS X
+- Android 10
+- iOS 13
 
 ## Technologies used
 
