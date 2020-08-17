@@ -24,10 +24,6 @@ def show_index():
     return render_template("pages/index.html")
 
 
-@app.route('/testextend')
-def extend():
-    return render_template("testextend.html")
-
 
 # Adding/posting recipe
 @app.route('/recipe/add', methods=["POST", "GET"])
@@ -39,19 +35,19 @@ def add_recipe():
 
     if request.method == "POST":
         recipes.insert_one(request.form.to_dict())
-        return redirect(url_for('pages/recipe_list'))
+        return redirect(url_for('pages/see_our_recipes'))
 
     return render_template("pages/addrecipe.html",
                            categories=mongo.db.categories.find())
 
 
 # list of recipes
-@app.route('/recipelist')
-def recipe_list():
+@app.route('/see_our_recipes')
+def see_our_recipes():
     """
     will render the complete list of recipes
     """
-    return render_template("pages/recipelist.html",
+    return render_template("pages/seeourrecipes.html",
                            recipes=mongo.db.recipes.find())
 
 
@@ -83,7 +79,7 @@ def edit_recipe(recipe_id):
 @app.route('/updaterecipe/ <recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
     """
-    updates edited recipes to mongo.db and displays on recipe list
+    updates edited recipes to mongo.db and displays on see our recipes
     """
     recipes = mongo.db.recipes
     recipes.update({'_id': ObjectId(recipe_id)},
@@ -97,7 +93,7 @@ def update_recipe(recipe_id):
         'ingredients': request.form.get('ingredients'),
         'instructions': request.form.get('instructions')
     })
-    return redirect(url_for('pages/recipe_list'))
+    return redirect(url_for('pages/see_our_recipes'))
 
 
 # delete recipe
@@ -107,7 +103,7 @@ def delete_recipe(recipe_id):
     allow user to delete any recipe
     """
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    return redirect(url_for('pages/recipe_list'))
+    return redirect(url_for('pages/see_our_recipes'))
 
 
 if __name__ == '__main__':

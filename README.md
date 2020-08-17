@@ -56,7 +56,7 @@ This should at the same time allow the site owner to collect data saved to the d
 
 1. As a user, I want to **quickly access the detailed instrucitons for any recipe in the group.** so that I can **cook using the information presented to me**.
 2. As a user, I want to **quickly and easily choose a category** so that I can **narrow down the type of recipe I am looking for.**
-3. As a user, I want to **add my own reicpes to the group and be able to give a clear presentation of the recipe and instructions for its use** so that I can **allow friends and family to enjoy the recipe simply and correctly**
+3. As a user, I want to **add my own reicpes to the group and be able to give a clear presentation of the recipe and instructions for its use** so that I can **allow friends and family to benefit.**
 4. As a user, I want to **alter and ammend any of my recipes if I believe it improves the recipe** so that I can **help the group as a whole improve the recipes** 
 5. As a user, I want to **be able to easily navigate back to the home as well as between pages**
 
@@ -94,7 +94,8 @@ Google fonts wil be used thoughout. The font-familes will be indie flower and pa
 
 ## Colours
 
-colourcombos191 used from colour combos,.com
+Colour schemes were chosen using [colorcombos.com](https://www.colorcombos.com)
+
 
 ## Background Images
 The background images were chosen to be visually captive and to be an emmidiate indication of the reason and purpose of the website.
@@ -107,7 +108,10 @@ See the wireframes <a href="https://github.com/andershup/the-recipe-book-group/b
 
 ## TESTING
 
-[link to testing file]
+Manual testing: 
+Index page: All navbar links tested as functional in both mobile and expanded view.The "Home" link as well as clicking on the center-logo text returns page to the index page from all pages. 
+The main links to "See Recipe" and "Add recipe" tested and functional.
+
 
 ## Bugs and Fixes
 
