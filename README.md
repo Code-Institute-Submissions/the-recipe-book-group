@@ -1,28 +1,23 @@
-# the-recipe-book-group
-A free website for sharing your favorite recipes
-<h1 align="center"> the-cook-book-group
-</h1>
-<h2 align="center">A free recipe sharing website
-</h2>
+
+<h1 align="center"> the-cook-book-group</h1>
+<h2 align="center">A free recipe sharing website</h2>
 <br>
 <br>
 
-# Table of content:
+# Table of content
 
 (1) [UX](#ux)
 
--  [Project Purpose](#project-purpose)
-
+- [Project Purpose](#project-purpose)
 - [User Stories](#user-stories)
-
 - [Site Owner Goals](#site-owner-goals)
 
 (2) [UI and Design Choices](#ui-and-design-choices)
+
 - [Design Choices](#design-choices)
 - [Fonts](#fonts)
 - [Colours](#colours)
 - [Background](#background-images)
-
 
 (3) [Wireframes](#wireframes)
 
@@ -48,28 +43,24 @@ A free website for sharing your favorite recipes
 
 ## Project Purpose
 
-The purpose of this build is to provide a simple to use platform for a group to share recipes and instructions of their use using a common database. 
+The purpose of this build is to provide a simple to use platform for a group to share recipes and instructions of their use using a common database.
 This should at the same time allow the site owner to collect data saved to the database.
- 
 
 ## User Stories
 
 1. As a user, I want to **quickly access the detailed instrucitons for any recipe in the group.** so that I can **cook using the information presented to me**.
 2. As a user, I want to **quickly and easily choose a category** so that I can **narrow down the type of recipe I am looking for.**
 3. As a user, I want to **add my own reicpes to the group and be able to give a clear presentation of the recipe and instructions for its use** so that I can **allow friends and family to benefit.**
-4. As a user, I want to **alter and ammend any of my recipes if I believe it improves the recipe** so that I can **help the group as a whole improve the recipes** 
+4. As a user, I want to **alter and ammend any of my recipes if I believe it improves the recipe** so that I can **help the group as a whole improve the recipes**
 5. As a user, I want to **be able to easily navigate back to the home as well as between pages**
 
 ## Site Owner Goals
 
 - To have complete access to the collected data within the associated database.
 
-
-
-
 ## UI and Design Choices
 
-# UI 
+# UI
 
 - A mobile first approach to design will be used.
 - A navbar with the website title as a central feature. A home button to allow easy navigation back to the main page. A dropdown menu with the main options will feature on the the right side
@@ -96,10 +87,9 @@ Google fonts wil be used thoughout. The font-familes will be indie flower and pa
 
 Colour schemes were chosen using [colorcombos.com](https://www.colorcombos.com)
 
-
 ## Background Images
-The background images were chosen to be visually captive and to be an emmidiate indication of the reason and purpose of the website.
 
+The background images were chosen to be visually captive and to be an emmidiate indication of the reason and purpose of the website.
 
 ## WIREFRAMES
 
@@ -108,60 +98,95 @@ See the wireframes <a href="https://github.com/andershup/the-recipe-book-group/b
 
 ## TESTING
 
-Manual testing: 
-Index page: All navbar links tested as functional in both mobile and expanded view.The "Home" link as well as clicking on the center-logo text returns page to the index page from all pages. 
-The main links to "See Recipe" and "Add recipe" tested and functional.
+### Manual testing
 
+- Navbar: All navbar links tested as functional in both mobile and expanded view.The "Home" link as well as clicking on the center-logo text returns page to the index page from all pages.
+Errors found: The mobile nav is showing on the tablet(medium) setting.
+- Index.html main body: All links tested as functional.  
+- See our recipes page: All links tested functional. The last 'show this recipe' buttom obscured by footer so buffer div added outside the 'for' loop.
+- Add Recipe page: All links tested functional.
+Errors found: The Materialize column sizes used not responsive.
+- Footer: Footer showing correctly on all pages.
 
 ## Bugs and Fixes
+
+Navbar: Dispite having "show-on-small" as a Materialize class which is defined as "show on mobiles ONLY" it is still showing up to a width of 992px in Dev Tools.
+Also the side-nav is showing the entire length of the page.
+
+```html
+<a href="#" data-activates="mobile-nav" class="button-collapse show-on-small"><i class="material-icons">menu</i></a>
+```
+
+Add Recipe:(example code)
+
+```html
+ <div class="input-field col s12 m4 l3">
+```
+
+Favicon:
+
+```bash
+"GET /favicon.ico HTTP/1.1" 404
+```
+
+Restarting workspace in gitpod fixed this issue.
 
 ## DEPLOYMENT
 
 - Create requirements.txt in the terminal:
+
 ```bash
 pip3 freeze > requirements.txt
 ```
-* Create a Procfile in the termianl:
+
+- Create a Procfile in the termianl:
+
 ```bash
 echo web: python3 app.py > Procfile
 ```
-* Push files to your repository:
+
+- Push files to your repository:
+
 ```bash
 git push
 ```
 
-
 - Login to Heroku and in the dashboard create a new app.
-- In the depley section select GitHub as the deployment method. 
+- In the depley section select GitHub as the deployment method.
 - Go to settings and click 'Reveal Config Vars' then set IP: 0.0.0.0 and PORT: 5000.
-- Click 'Open app' to deploy. 
+- Click 'Open app' to deploy.
 
-Note:
+## Note
+
 Should you need to install the relevant requirements and dependencies use the following command:
+
 ```bash
-pip3 -r requirements.txt 
+pip3 -r requirements.txt
 ```
 
+### How to run this project in the terminal  
 
-### How to run this project in the terminal:  
-```bash 
+```bash
 flask run
 ```
+
 OR
+
 ```bash
 python3 app.py
 ```
 
- 
 ### All deployment tested on the following
 
 #### HARDWARE
+
 - Desktop PC
 - MacBook Air
 - Galaxy Tab A
 - Iphone X
 
 #### SOFTWARE
+
 - windows 10
 - OS X
 - Android 10
@@ -169,7 +194,7 @@ python3 app.py
 
 ## Technologies used
 
-### Front-End 
+### Front-End
 
 - **HTML** for the base structure of the website
 - **CSS** for adding styles to HTML elements
@@ -180,7 +205,7 @@ python3 app.py
 
 - **FLASK** microframework
 - **FLASK-PYMONGO**
-- **DNSPYTHON** 
+- **DNSPYTHON**
 - **HERUKO**
 - **PYTHON**
 - **PYMONGO**
@@ -188,6 +213,7 @@ python3 app.py
 - **BSON**
 
 ## Tools
+
 - [colorpicker.com](https://www.ginifab.com/feeds/pms/color_picker_from_image.php)
 - [whimsical Wireframes](https://whimsical.com/wireframes)
 - [Edamam nutritional analysist API](https://developer.edamam.com/edamam-docs-nutrition-api)
@@ -195,11 +221,10 @@ python3 app.py
 ## CODE
 
 Some of my code was adapted from:
+
 - [W3Schools](https://www.w3schools.com/)
 - [Whimsical](https://whimsical.com/)
 
-
- 
 ## Inspiration
 
 ## Credits
@@ -211,7 +236,5 @@ This repository was created using the [Code Institute Gitpod Template](https://g
 No "git push" commands were used until after commit 3efcdfc12417a64241343ce24c82a6d3d547a34b. I had Heroku directly connected and auto deployment set and so I thought I was not necessary to git push.
 
 ## Disclaimer
+
 All content within this website are for educational purposes only.
-
-
-
