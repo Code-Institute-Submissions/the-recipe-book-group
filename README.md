@@ -131,6 +131,8 @@ Favicon:
 
 Restarting workspace in gitpod fixed this issue.
 
+
+
 ## DEPLOYMENT
 
 - Create requirements.txt in the terminal:
