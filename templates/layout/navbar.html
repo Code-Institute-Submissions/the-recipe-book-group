@@ -2,10 +2,11 @@
 <nav>
    <div class="nav-wrapper">
       <a href="#" class="center brand-logo">The Recipe Cook Book Group</a>
-      <ul id="nav-mobile" class="center hide-on-med-and-down">
+      <ul id="nav-mobile" class="left">
       </ul>
       <!-- Dropdown Trigger -->
-      <a href="#" class="transparent dropdown-button btn left"  data-activates="nav-options-dropdown"> I Want to.....</a>
+      <a href="#" class="transparent dropdown-button btn left show-on-medium-and-up"  data-activates="nav-options-dropdown">I Want to.....</a>
+       <a href="#" data-activates="mobile-demo" class="button-collapse show-on-small"><i class="material-icons">menu</i></a>
    </div>
    <!-- Dropdown Structure -->
    <ul id="nav-options-dropdown" class="transparent dropdown-content">
@@ -16,6 +17,14 @@
       <li><a href="{{ url_for('recipe_list')}}" class="black-text">See our Recipes</a></li>
       <li class="divider"></li>
    </ul>
+      <ul class="side-nav" id="mobile-demo">
+       <li><a href="{{url_for('show_index')}}" class="black-text">Go Home</a></li>
+      <li class="divider"></li>
+      <li><a href="{{ url_for('add_recipe')}}" class="black-text">Add Recipe</a></li>
+      <li class="divider"></li>
+      <li><a href="{{ url_for('recipe_list')}}" class="black-text">See our Recipes</a></li>
+      <li class="divider"></li>
+      </ul>
 </nav>
 
   
