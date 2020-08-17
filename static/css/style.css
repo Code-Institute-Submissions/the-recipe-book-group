@@ -75,17 +75,25 @@ nav {
 	display: inline-block;
 }
 
-.list-button {
+.list-button,
+.edit-button,
+.delete-button {
 	background-color: #4e5d5b;
 }
 
-.list-button:hover {
+.list-button:hover,
+.edit-button:hover,
+.delete-button:hover {
 	background-color: #02353196;
 }
 
 .ingredients-text,
 .instructions-text {
 	padding: 5px 50px;
+}
+
+.page-bottom-spacer {
+    min-height: 50px;
 }
 
 footer {
