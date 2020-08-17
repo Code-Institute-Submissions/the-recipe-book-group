@@ -35,7 +35,7 @@ def add_recipe():
 
     if request.method == "POST":
         recipes.insert_one(request.form.to_dict())
-        return redirect(url_for('pages/see_our_recipes'))
+        return redirect(url_for('see_our_recipes'))
 
     return render_template("pages/addrecipe.html",
                            categories=mongo.db.categories.find())
@@ -103,7 +103,7 @@ def delete_recipe(recipe_id):
     allow user to delete any recipe
     """
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    return redirect(url_for('pages/see_our_recipes'))
+    return redirect(url_for('see_our_recipes'))
 
 
 if __name__ == '__main__':
