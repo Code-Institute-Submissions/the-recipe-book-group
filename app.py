@@ -24,7 +24,6 @@ def show_index():
     return render_template("pages/index.html")
 
 
-
 # Adding/posting recipe
 @app.route('/recipe/add', methods=["POST", "GET"])
 def add_recipe():

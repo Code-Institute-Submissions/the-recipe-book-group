@@ -108,6 +108,12 @@ Errors found: The mobile nav is showing on the tablet(medium) setting.
 Errors found: The Materialize column sizes used not responsive.
 - Footer: Footer showing correctly on all pages.
 
+### Validator testing
+
+- CSS. No errors found.
+- 
+- 
+
 ## Bugs and Fixes
 
 Navbar: Dispite having "show-on-small" as a Materialize class which is defined as "show on mobiles ONLY" it is still showing up to a width of 992px in Dev Tools.
@@ -214,11 +220,18 @@ python3 app.py
 - **MongoDB Atlas**
 - **BSON**
 
+### Testing
+
+- [Markdownlint](https://dlaa.me/markdownlint/)
+- [JavaScript](https://jshint.com/)
+- [CSS Validator](https://jigsaw.w3.org/css-validator/)
+- [HTML Validator](https://validator.w3.org/)
+
 ## Tools
 
 - [colorpicker.com](https://www.ginifab.com/feeds/pms/color_picker_from_image.php)
 - [whimsical Wireframes](https://whimsical.com/wireframes)
-- [Edamam nutritional analysist API](https://developer.edamam.com/edamam-docs-nutrition-api)
+- [HTML formatter](https://webformatter.com/html)
 
 ## CODE
 

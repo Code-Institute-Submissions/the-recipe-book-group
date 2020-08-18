@@ -2,7 +2,6 @@
 
 $(document).ready(function () {
   $("select").material_select();
-
   $(".dropdown-button").dropdown({
     inDuration: 1500,
     outDuration: 1000,
