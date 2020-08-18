@@ -113,7 +113,7 @@ Errors found: The Materialize column sizes used not responsive.
 #### CSS. No errors found.
 
 #### HTML
-- base.html.  ![errorcode](/supportdocs/missingtitle.png)
+- base.html.  ![error code](/supportdocs/missingtitle.png)
 - 
 
 ## Bugs and Fixes
