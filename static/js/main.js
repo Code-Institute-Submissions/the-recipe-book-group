@@ -4,7 +4,7 @@ $(document).ready(function () {
   $("select").material_select();
   $(".dropdown-button").dropdown({
     inDuration: 1500,
-    outDuration: 1000,
+    outDuration: 500,
     constrainWidth: true, // Does not change width of dropdown to that of the activator
     hover: true, // Activate on hover
     gutter: 0, // Spacing from edge

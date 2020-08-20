@@ -113,7 +113,7 @@ Errors found: The Materialize column sizes used not responsive.
 #### CSS. No errors found.
 
 #### HTML
-- base.html.  ![error code](/supportdocs/missingtitle.png)
+- base.html.  
 - 
 
 ## Bugs and Fixes
@@ -121,6 +121,9 @@ Errors found: The Materialize column sizes used not responsive.
 Navbar: Dispite having "show-on-small" as a Materialize class which is defined as "show on mobiles ONLY" it is still showing up to a width of 992px in Dev Tools.
 Also the side-nav is showing the entire length of the page.
 
+
+the dropdown menu would not hide on mobile despite adding hide-on-small-only to class
+also mobile menu si showing on tablet instpite adding show-on-small class. adding hide-on-med-and-up removed the menu on all formats.
 ```html
 <a href="#" data-activates="mobile-nav" class="button-collapse show-on-small"><i class="material-icons">menu</i></a>
 ```

@@ -71,6 +71,9 @@ nav {
 	font-family: cursive;
 }
 
+.recipe-text {
+    font-size: 30px;
+}
 .text-wrapper>p a a>i {
 	display: inline-block;
 }
@@ -95,7 +98,7 @@ nav {
 }
 
 .page-bottom-spacer {
-    min-height: 50px;
+    min-height: 60px;
 }
 
 footer {
