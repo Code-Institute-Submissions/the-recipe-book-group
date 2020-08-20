@@ -28,11 +28,11 @@ body {
 	font-size: 4vh;
 	text-align: center;
 	font-family: cursive;
-	padding-top: 15vh;
+	padding-top: 10vh;
 }
 
 .index-text {
-	color: #672323;
+	color: #672323;;
 	font-size: 10vh;
 	font-family: cursive;
 }
@@ -75,12 +75,14 @@ nav {
 	display: inline-block;
 }
 
+.submit-button,
 .list-button,
 .edit-button,
 .delete-button {
 	background-color: #4e5d5b;
 }
 
+.submit-button:hover,
 .list-button:hover,
 .edit-button:hover,
 .delete-button:hover {

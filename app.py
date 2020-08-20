@@ -22,6 +22,25 @@ def show_index():
     """
     return render_template("pages/index.html")
 
+@app.route('/recipes')
+def recipes():
+    """
+    will render the complete list of recipes
+    """
+    return render_template("pages/recipes.html",
+                           recipes=mongo.db.recipes.find())
+
+
+@app.route('/recipe/<recipe_id>')
+def recipe(recipe_id):
+    """
+    will show the full details of an individual recipe
+    """
+    the_recipe = mongo.db.recipes.find_one_or_404({"_id": ObjectId(recipe_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template('pages/recipe.html', recipe=the_recipe,
+                           zcategories=all_categories)
+
 
 @app.route('/recipe/add', methods=["POST", "GET"])
 def add_recipe():
@@ -38,29 +57,7 @@ def add_recipe():
                            categories=mongo.db.categories.find())
 
 
-# list of recipes
-@app.route('/recipes')
-def recipes():
-    """
-    will render the complete list of recipes
-    """
-    return render_template("pages/recipes.html",
-                           recipes=mongo.db.recipes.find())
-
-
-# recipe page
-@app.route('/recipe/<recipe_id>')
-def recipe(recipe_id):
-    """
-    will show the full details of an individual recipe
-    """
-    the_recipe = mongo.db.recipes.find_one_or_404({"_id": ObjectId(recipe_id)})
-    all_categories = mongo.db.categories.find()
-    return render_template('pages/recipe.html', recipe=the_recipe,
-                           zcategories=all_categories)
-
-
-@app.route('/editrecipe/<recipe_id>')
+@app.route('/edit/recipe/<recipe_id>')
 def edit_recipe(recipe_id):
     """
     will allow the user to edit a particular recipe. Recipe reposted on submit
