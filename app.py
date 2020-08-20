@@ -8,14 +8,13 @@ if os.path.exists("env.py"):
     import env
 
 app = Flask(__name__)
-app.config["MONGO_DBNAME"] = 'recipe_cook_book_group'
+app.config["MONGO_DBNAME"] = os.environ.get('MONGO_DBNAME')
 app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
 print(os.getenv('MONGO_URI'))
 mongo = PyMongo(app)
 
 
-# landing page
 @app.route("/")
 def show_index():
     """
@@ -24,7 +23,6 @@ def show_index():
     return render_template("pages/index.html")
 
 
-# Adding/posting recipe
 @app.route('/recipe/add', methods=["POST", "GET"])
 def add_recipe():
     """
@@ -41,29 +39,28 @@ def add_recipe():
 
 
 # list of recipes
-@app.route('/see_our_recipes')
-def see_our_recipes():
+@app.route('/recipes')
+def recipes():
     """
     will render the complete list of recipes
     """
-    return render_template("pages/seeourrecipes.html",
+    return render_template("pages/recipes.html",
                            recipes=mongo.db.recipes.find())
 
 
 # recipe page
-@app.route('/recipepage/ <recipe_id>')
-def show_recipe(recipe_id):
+@app.route('/recipe/<recipe_id>')
+def recipe(recipe_id):
     """
     will show the full details of an individual recipe
     """
     the_recipe = mongo.db.recipes.find_one_or_404({"_id": ObjectId(recipe_id)})
     all_categories = mongo.db.categories.find()
-    return render_template('pages/recipepage.html', recipe=the_recipe,
+    return render_template('pages/recipe.html', recipe=the_recipe,
                            zcategories=all_categories)
 
 
-# edit recipe
-@app.route('/editrecipe/ <recipe_id>')
+@app.route('/editrecipe/<recipe_id>')
 def edit_recipe(recipe_id):
     """
     will allow the user to edit a particular recipe. Recipe reposted on submit
@@ -74,8 +71,7 @@ def edit_recipe(recipe_id):
                            categories=all_categories)
 
 
-# update recipe
-@app.route('/updaterecipe/ <recipe_id>', methods=["POST"])
+@app.route('/update/recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
     """
     updates edited recipes to mongo.db and displays on see our recipes
@@ -92,17 +88,16 @@ def update_recipe(recipe_id):
         'ingredients': request.form.get('ingredients'),
         'instructions': request.form.get('instructions')
     })
-    return redirect(url_for('pages/see_our_recipes'))
+    return redirect(url_for('pages/recipes'))
 
 
-# delete recipe
-@app.route('/deleterecipe/ <recipe_id>')
+@app.route('/delete/recipe/<recipe_id>')
 def delete_recipe(recipe_id):
     """
     allow user to delete any recipe
     """
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    return redirect(url_for('see_our_recipes'))
+    return redirect(url_for('recipes'))
 
 
 if __name__ == '__main__':

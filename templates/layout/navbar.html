@@ -4,14 +4,14 @@
       <ul id="nav-mobile" class="left">
       </ul>
       <!-- Dropdown Trigger -->
-      <a href="#" class="transparent dropdown-button btn left show-on-medium-and-up"  data-activates="nav-options-dropdown">I Want to.....</a>
+      <a href="#" class="transparent dropdown-button btn right show-on-medium-and-up"  data-activates="nav-options-dropdown">I Want to.....</a>
        <a href="#" data-activates="mobile-nav" class="button-collapse show-on-small"><i class="material-icons">menu</i></a>
    </div>
    <!-- Dropdown Structure -->
    <ul id="nav-options-dropdown" class="transparent dropdown-content">
       <li><a href="{{url_for('show_index')}}" class="black-text">Go Home</a></li>
       <li class="divider"></li>
-      <li><a href="{{ url_for('see_our_recipes')}}" class="black-text">See our Recipes</a></li>
+      <li><a href="{{ url_for('recipes')}}" class="black-text">See our Recipes</a></li>
       <li class="divider"></li>
       <li><a href="{{ url_for('add_recipe')}}" class="black-text">Add Recipe</a></li>
       <li class="divider"></li>
@@ -20,7 +20,7 @@
       <ul class="side-nav" id="mobile-nav">
        <li><a href="{{url_for('show_index')}}" class="black-text">Go Home</a></li>
       <li class="divider"></li>
-      <li><a href="{{ url_for('see_our_recipes')}}" class="black-text">See our Recipes</a></li>
+      <li><a href="{{ url_for('recipes')}}" class="black-text">See our Recipes</a></li>
       <li class="divider"></li>
       <li><a href="{{ url_for('add_recipe')}}" class="black-text">Add Recipe</a></li>
       <li class="divider"></li>

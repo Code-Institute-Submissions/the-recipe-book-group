@@ -6,7 +6,7 @@
       <p>Added by:{{recipe.added_by}}</p>
       <p>Category:{{recipe.category_name}}</p>
       <a
-         href="{{ url_for('show_recipe', recipe_id=recipe._id)}}"
+         href="{{ url_for('recipe', recipe_id=recipe._id)}}"
          class="waves-effect waves-light list-button btn"
          ><i class="material-icons left">cloud</i>Show This Recipe</a
          >
