@@ -85,7 +85,7 @@ def update_recipe(recipe_id):
         'ingredients': request.form.get('ingredients'),
         'instructions': request.form.get('instructions')
     })
-    return redirect(url_for('pages/recipes'))
+    return redirect(url_for('recipes'))
 
 
 @app.route('/delete/recipe/<recipe_id>')
