@@ -2,9 +2,9 @@
 <body class="container-fluid recipe-list-container">
    {% for recipe in recipes %}
    <div class="row text-wrapper recipe-text">
-      <p>Recipe Name:{{recipe.recipe_name}}</p>
-      <p>Added by:{{recipe.added_by}}</p>
-      <p>Category:{{recipe.category_name}}</p>
+      <p>Recipe Name: {{recipe.recipe_name}}</p>
+      <p>Added by: {{recipe.added_by}}</p>
+      <p>Category: {{recipe.category_name}}</p>
       <a
          href="{{ url_for('recipe', recipe_id=recipe._id)}}"
          class="waves-effect waves-light list-button btn"

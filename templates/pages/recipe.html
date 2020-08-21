@@ -1,12 +1,12 @@
 {% extends 'layout/base.html' %} {% block content %}
 <body class="container-fluid show-recipe-container">
    <div class="row text-wrapper recipe-text">
-      <p>Category:{{recipe.category_name}}</p>
-      <p>Recipe Name:{{recipe.recipe_name}}</p>
-      <p>Added by:{{recipe.added_by}}</p>
-      <p>Serves:{{recipe.serves}}</p>
-      <p>Prep time:{{recipe.prep_time}}</p>
-      <p>Coooking time:{{recipe.cooking_time}}</p>
+      <p>Category: {{recipe.category_name}}</p>
+      <p>Recipe Name: {{recipe.recipe_name}}</p>
+      <p>Added by: {{recipe.added_by}}</p>
+      <p>Serves: {{recipe.serves}}</p>
+      <p>Prep time: {{recipe.prep_time}}</p>
+      <p>Coooking time:{ {recipe.cooking_time}}</p>
       <div class="ingredients-text">
          <p class="ingredients-text">Ingredients:{{recipe.ingredients}}</p>
       </div>

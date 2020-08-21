@@ -51,7 +51,7 @@ def add_recipe():
 
     if request.method == "POST":
         recipes.insert_one(request.form.to_dict())
-        return redirect(url_for('see_our_recipes'))
+        return redirect(url_for('recipes'))
 
     return render_template("pages/addrecipe.html",
                            categories=mongo.db.categories.find())
