@@ -60,6 +60,10 @@ nav {
 	font-family: fantasy;
 }
 
+.mobile-nav {
+    box-shadow: none!important;
+}
+
 
 .dropdown-button {
 	height: 100%;

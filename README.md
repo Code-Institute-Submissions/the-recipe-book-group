@@ -94,39 +94,24 @@ The background images were chosen to be visually captive and to be an emmidiate 
 ## WIREFRAMES
 
 Wireframes were constructed using [whimsical Wireframes](https://whimsical.com/wireframes) as it allow me to easily construct both a mobile and desktop version of original concept.
-See the wireframes <a href="https://github.com/andershup/the-recipe-book-group/blob/196ae246d08eeb42e0cca89686e5c49d33c066e4/wireframes">here.</a>
+See the wireframes <a href="https://github.com/andershup/the-recipe-book-group/tree/master/wireframes">here.</a>
 
 ## TESTING
 
 ### Manual testing
 
-- Navbar: All navbar links tested as functional in both mobile and expanded view.The "Home" link as well as clicking on the center-logo text returns page to the index page from all pages.
-Errors found: The mobile nav is showing on the tablet(medium) setting.
-- Index.html main body: All links tested as functional.  
-- See our recipes page: All links tested functional. The last 'show this recipe' buttom obscured by footer so buffer div added outside the 'for' loop.
-- Add Recipe page: All links tested functional.
-Errors found: The Materialize column sizes used not responsive.
-- Footer: Footer showing correctly on all pages.
-
-### Validator testing
-
-#### CSS. No errors found.
-
-#### HTML
-- base.html.  
-- 
+I want through all my user stories and tested all functionality and  working. I am satisfied that all the planned user stories have been implemented correctly.
 
 ## Bugs and Fixes
 
 Navbar: Dispite having "show-on-small" as a Materialize class which is defined as "show on mobiles ONLY" it is still showing up to a width of 992px in Dev Tools.
-Also the side-nav is showing the entire length of the page.
+The dropdown menu would not hide on mobile despite adding hide-on-small-only to class
+Mobile menu si showing on tablet instpite adding show-on-small class. Adding hide-on-med-and-up removed the menu on all formats.
 
-
-the dropdown menu would not hide on mobile despite adding hide-on-small-only to class
-also mobile menu si showing on tablet instpite adding show-on-small class. adding hide-on-med-and-up removed the menu on all formats.
 ```html
 <a href="#" data-activates="mobile-nav" class="button-collapse show-on-small"><i class="material-icons">menu</i></a>
 ```
+I tried to use CSS @media queries but this did not work either. The addition of the btn class (materialize) in the mobile-nav resolved the issue.
 
 Add Recipe:(example code)
 
@@ -134,13 +119,16 @@ Add Recipe:(example code)
  <div class="input-field col s12 m4 l3">
 ```
 
+The rows and columns were re-arranged correctly. 
+
 Favicon:
 
 ```bash
 "GET /favicon.ico HTTP/1.1" 404
 ```
 
-Restarting workspace in gitpod fixed this issue.
+Restarting workspace in gitpod fixed this issue temporarely but bug percisted. The favicon icons were moved out of the images folder and directly into the static folder. This resolved the issue.
+
 
 
 
@@ -245,9 +233,10 @@ Some of my code was adapted from:
 - [W3Schools](https://www.w3schools.com/)
 - [Whimsical](https://whimsical.com/)
 
-## Inspiration
-
 ## Credits
+
+- [Code Institute]("https://codeinstitute.net/")
+- My Mentor Simen Deahlin.
 
 ## Please note
 
