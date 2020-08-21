@@ -1,10 +1,10 @@
 
 <h1 align="center"> the-cook-book-group</h1>
-<h2 align="center">A free recipe sharing website</h2>
+<h2 align="center">A Free Recipe Sharing Website</h2>
 <br>
 <br>
 
-![](wireframes/displays-mockup.png)
+![display mockups image](wireframes/displays-mockup.PNG)
 
 # Table of content
 
@@ -113,6 +113,7 @@ Mobile menu si showing on tablet instpite adding show-on-small class. Adding hid
 ```html
 <a href="#" data-activates="mobile-nav" class="button-collapse show-on-small"><i class="material-icons">menu</i></a>
 ```
+
 I tried to use CSS @media queries but this did not work either. The addition of the btn class (materialize) in the mobile-nav resolved the issue.
 
 Add Recipe:(example code)
@@ -121,7 +122,7 @@ Add Recipe:(example code)
  <div class="input-field col s12 m4 l3">
 ```
 
-The rows and columns were re-arranged correctly. 
+The rows and columns were re-arranged correctly.
 
 Favicon:
 
@@ -130,9 +131,6 @@ Favicon:
 ```
 
 Restarting workspace in gitpod fixed this issue temporarely but bug percisted. The favicon icons were moved out of the images folder and directly into the static folder. This resolved the issue.
-
-
-
 
 ## DEPLOYMENT
 
@@ -231,6 +229,7 @@ Heroku live link: https://the-recipe-book-group.herokuapp.com
 - [colorpicker.com](https://www.ginifab.com/feeds/pms/color_picker_from_image.php)
 - [whimsical Wireframes](https://whimsical.com/wireframes)
 - [HTML formatter](https://webformatter.com/html)
+- [Python formatter]("https://codebeautify.org/python-formatter-beautifier")
 
 ## CODE
 
@@ -253,3 +252,4 @@ No "git push" commands were used until after commit 3efcdfc12417a64241343ce24c82
 ## Disclaimer
 
 All content within this website are for educational purposes only.
+.
