@@ -4,6 +4,8 @@
 <br>
 <br>
 
+![](wireframes/displays-mockup.png)
+
 # Table of content
 
 (1) [UX](#ux)
@@ -157,6 +159,8 @@ git push
 - Go to settings and click 'Reveal Config Vars' then set IP: 0.0.0.0 and PORT: 5000.
 - Click 'Open app' to deploy.
 
+Heroku live link: https://the-recipe-book-group.herokuapp.com/
+
 ## Note
 
 Should you need to install the relevant requirements and dependencies use the following command:
@@ -176,6 +180,8 @@ OR
 ```bash
 python3 app.py
 ```
+
+Heroku live link: https://the-recipe-book-group.herokuapp.com
 
 ### All deployment tested on the following
 
